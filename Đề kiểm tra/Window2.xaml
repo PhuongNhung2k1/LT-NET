@@ -1,0 +1,127 @@
+﻿<Window x:Class="Code_mau_kt2.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Code_mau_kt2"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Orientation="Horizontal"
+        >
+            <Label Content="Tên nhân viên"></Label>
+            <TextBox 
+                IsEnabled="False"
+                Grid.Row="0" 
+                Grid.Column="1"
+                Width="200"
+                Text=""
+                Name="txtname" Initialized="w2Name_Initialized" Loaded="w2Name_Loaded"
+            ></TextBox>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            Orientation="Horizontal"
+        >
+            <Label Content="Phòng ban"></Label>
+            <ComboBox 
+                IsEnabled="False"
+                Grid.Row="1" 
+                Grid.Column="1"
+                Width="200" Name="cboDepartment">
+                <ComboBoxItem Content="Tổ chức"></ComboBoxItem>
+                <ComboBoxItem Content="Vật tư"></ComboBoxItem>
+                <ComboBoxItem Content="Tài chính"></ComboBoxItem>
+                <ComboBoxItem Content="Kế hoạch"></ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            Orientation="Horizontal"
+        >
+            <Label Content="Phòng ban"></Label>
+            <StackPanel 
+                Grid.Column="1"
+                Orientation="Horizontal"
+                VerticalAlignment="Center"
+                Name="cbLanguages"
+            >
+                <CheckBox Content="Anh"/>
+                <CheckBox Content="Pháp"/>
+                <CheckBox Content="Trung"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Orientation="Horizontal"
+        >
+            <Label Content="Ngày sinh"></Label>
+            <DatePicker Name="dtTime" IsEnabled="False" Grid.Column="1"/>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            Orientation="Horizontal"
+        >
+            <Label Content="Số ngày làm việc"></Label>
+            <TextBox 
+                Grid.Row="4" 
+                Grid.Column="1"
+                Width="200"
+                Name="txtWorkingDay"
+            ></TextBox>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Row="5"
+            Grid.ColumnSpan="2"   
+            Orientation="Horizontal"
+        >
+            <Label Content="Tiền lương"></Label>
+            <TextBox
+                Name="txtSalary"
+                IsEnabled="False"
+                Grid.Row="5" 
+                Grid.Column="1"
+                Margin="10,0,10,0"
+                Width="200"
+            ></TextBox>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="7"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+        >
+            <Button Margin="0,0,20,0" Content="Đóng" Height="40" Grid.Row="7" Grid.Column="0" Width="40" Click="Button_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
